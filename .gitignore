@@ -1,0 +1,19 @@
+# Virtual environment
+venv/
+ENV/
+env/
+
+# Environment variables & secrets (NEVER COMMIT THIS)
+.env
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+
+# Dataset raw files (downloads automatically via script)
+dataset/
+*.zip
+
+# OS artifacts
+.DS_Store
+Thumbs.db
