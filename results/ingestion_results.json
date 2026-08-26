@@ -11,42 +11,42 @@
   },
   {
     "platform": "CognoDB Cloud",
-    "total_time_sec": 67.43,
+    "total_time_sec": 62.79,
     "total_nodes": 10371,
     "total_edges": 122886,
-    "node_rate_per_sec": 153.8,
-    "edge_rate_per_sec": 1822.41,
+    "node_rate_per_sec": 165.16,
+    "edge_rate_per_sec": 1956.98,
     "load_method": "Cypher UNWIND batches (batch_size=1000) via Bolt driver",
-    "timestamp": "2026-08-26 12:50:50"
+    "timestamp": "2026-08-26 13:56:27"
   },
   {
     "platform": "Local Memgraph",
-    "total_time_sec": 11.66,
+    "total_time_sec": 8.9,
     "total_nodes": 10371,
     "total_edges": 122886,
-    "node_rate_per_sec": 889.09,
-    "edge_rate_per_sec": 10534.82,
+    "node_rate_per_sec": 1164.9,
+    "edge_rate_per_sec": 13802.89,
     "load_method": "Cypher UNWIND batches (batch_size=1000) via Bolt driver",
-    "timestamp": "2026-08-26 12:51:26"
+    "timestamp": "2026-08-26 13:56:58"
   },
   {
     "platform": "Local FalkorDB",
-    "total_time_sec": 13.33,
+    "total_time_sec": 13.19,
     "total_nodes": 10371,
     "total_edges": 122886,
-    "node_rate_per_sec": 778.27,
-    "edge_rate_per_sec": 9221.74,
+    "node_rate_per_sec": 786.08,
+    "edge_rate_per_sec": 9314.24,
     "load_method": "Cypher UNWIND batches (batch_size=1000) via GRAPH.QUERY",
-    "timestamp": "2026-08-26 12:51:40"
+    "timestamp": "2026-08-26 13:57:11"
   },
   {
     "platform": "Local ArangoDB",
-    "total_time_sec": 5.29,
+    "total_time_sec": 3.66,
     "total_nodes": 10371,
     "total_edges": 122886,
-    "node_rate_per_sec": 1961.47,
-    "edge_rate_per_sec": 23241.43,
+    "node_rate_per_sec": 2829.95,
+    "edge_rate_per_sec": 33532.1,
     "load_method": "python-arango insert_many() bulk API (batch_size=2000)",
-    "timestamp": "2026-08-26 12:51:45"
+    "timestamp": "2026-08-26 13:57:15"
   }
 ]

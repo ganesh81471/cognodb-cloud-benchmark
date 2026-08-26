@@ -2,91 +2,91 @@
   {
     "platform": "CognoDB Cloud",
     "workload": "Point_Lookup",
-    "mean_ms": 407.2,
-    "p50_ms": 409.02,
-    "p95_ms": 613.97,
-    "min_ms": 282.8,
-    "max_ms": 1330.22
+    "mean_ms": 348.79,
+    "p50_ms": 319.91,
+    "p95_ms": 431.58,
+    "min_ms": 276.87,
+    "max_ms": 1283.44
   },
   {
     "platform": "CognoDB Cloud",
     "workload": "Filtered_Lookup",
-    "mean_ms": 398.39,
-    "p50_ms": 408.59,
-    "p95_ms": 613.93,
-    "min_ms": 292.73,
-    "max_ms": 1023.73
+    "mean_ms": 346.89,
+    "p50_ms": 320.31,
+    "p95_ms": 437.22,
+    "min_ms": 290.88,
+    "max_ms": 1272.36
   },
   {
     "platform": "Local Neo4j",
     "workload": "Point_Lookup",
-    "mean_ms": 51.85,
-    "p50_ms": 10.46,
-    "p95_ms": 87.85,
-    "min_ms": 4.98,
-    "max_ms": 2310.37
+    "mean_ms": 46.03,
+    "p50_ms": 9.69,
+    "p95_ms": 95.19,
+    "min_ms": 4.56,
+    "max_ms": 1290.86
   },
   {
     "platform": "Local Neo4j",
     "workload": "Filtered_Lookup",
-    "mean_ms": 63.08,
-    "p50_ms": 20.08,
-    "p95_ms": 145.52,
-    "min_ms": 10.19,
-    "max_ms": 1230.16
+    "mean_ms": 67.26,
+    "p50_ms": 28.15,
+    "p95_ms": 190.04,
+    "min_ms": 8.3,
+    "max_ms": 913.4
   },
   {
     "platform": "Local Memgraph",
     "workload": "Point_Lookup",
-    "mean_ms": 1.51,
-    "p50_ms": 0.78,
-    "p95_ms": 1.58,
-    "min_ms": 0.56,
-    "max_ms": 53.06
+    "mean_ms": 1.18,
+    "p50_ms": 0.63,
+    "p95_ms": 1.02,
+    "min_ms": 0.46,
+    "max_ms": 51.35
   },
   {
     "platform": "Local Memgraph",
     "workload": "Filtered_Lookup",
-    "mean_ms": 8.34,
-    "p50_ms": 3.86,
-    "p95_ms": 53.76,
-    "min_ms": 3.08,
-    "max_ms": 58.29
+    "mean_ms": 6.22,
+    "p50_ms": 3.18,
+    "p95_ms": 49.48,
+    "min_ms": 2.77,
+    "max_ms": 54.04
   },
   {
     "platform": "Local FalkorDB",
     "workload": "Point_Lookup",
-    "mean_ms": 0.8,
-    "p50_ms": 0.54,
-    "p95_ms": 2.26,
-    "min_ms": 0.42,
-    "max_ms": 2.69
+    "mean_ms": 0.77,
+    "p50_ms": 0.63,
+    "p95_ms": 1.69,
+    "min_ms": 0.51,
+    "max_ms": 1.96
   },
   {
     "platform": "Local FalkorDB",
     "workload": "Filtered_Lookup",
-    "mean_ms": 2.07,
-    "p50_ms": 1.66,
-    "p95_ms": 2.46,
-    "min_ms": 1.49,
-    "max_ms": 23.4
+    "mean_ms": 2.08,
+    "p50_ms": 1.47,
+    "p95_ms": 2.25,
+    "min_ms": 1.29,
+    "max_ms": 28.28
   },
   {
     "platform": "Local ArangoDB",
     "workload": "Point_Lookup",
-    "mean_ms": 48.48,
-    "p50_ms": 48.09,
-    "p95_ms": 51.53,
-    "min_ms": 44.61,
-    "max_ms": 58.68
+    "mean_ms": 47.66,
+    "p50_ms": 47.87,
+    "p95_ms": 49.57,
+    "min_ms": 43.88,
+    "max_ms": 50.99
   },
   {
     "platform": "Local ArangoDB",
     "workload": "Filtered_Lookup",
-    "mean_ms": 51.84,
-    "p50_ms": 52.05,
-    "p95_ms": 54.76,
-    "min_ms": 46.07,
-    "max_ms": 57.24
+    "mean_ms": 51.78,
+    "p50_ms": 52.06,
+    "p95_ms": 54.66,
+    "min_ms": 46.14,
+    "max_ms": 57.49
   }
 ]

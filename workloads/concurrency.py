@@ -236,12 +236,9 @@ def arango_worker(url, user, password, stop_event, measure_event, thread_results
 
 def cleanup_arango(url, user, password):
     try:
-        print(f"  [ArangoDB Worker] Connecting to {url}")
         client = ArangoClient(hosts=url)
-        print(f"  [ArangoDB Worker] Connected, opening database")
-        db = client.db("movielens_db", username=user, password=password)
-        print(f"  [ArangoDB Worker] Database opened successfully")
-        edge_coll = "ratings" if db.has_collection("ratings") else "rated"
+        db = client.db("movielens_db", username=user or None, password=password or None)
+        edge_coll = "RATED" if db.has_collection("RATED") else ("ratings" if db.has_collection("ratings") else "rated")
         if db.has_collection(edge_coll):
             db.aql.execute(f"FOR e IN {edge_coll} FILTER e.synthetic == true REMOVE e IN {edge_coll}")
             print(f"  [ArangoDB Cleanup] Purged synthetic edges from '{edge_coll}'.")

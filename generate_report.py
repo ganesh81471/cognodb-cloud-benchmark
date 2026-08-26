@@ -78,7 +78,9 @@ def generate_charts(df):
             data=ingest_df,
             x="platform",
             y="edge_rate_per_sec",
-            palette="magma"
+            hue="platform",
+            palette="magma",
+            legend=False
         )
         plt.title("Ingestion Throughput (Relationships / Second)", fontsize=14, fontweight="bold")
         plt.xlabel("Platform", fontsize=12)
