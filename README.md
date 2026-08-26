@@ -297,5 +297,4 @@ Across every workload category, the same architectural pattern holds: **in-memor
 - ArangoDB's ingestion throughput shows meaningfully higher run-to-run variance (~36%) than any other platform (Section 5).
 - **ArangoDB's concurrent workload results are read-only, not the intended 80/20 mix**, due to a root-caused case-sensitivity bug in edge-collection name resolution (Section 9).
 - Neo4j's `storeSize` and CognoDB's storage/memory footprint are both genuinely not observable via the methods available to this benchmark (Section 10).
-- Cold-start latency was not separately isolated as its own measured metric; all read-workload figures are post-warm-up.
-- `requirements.txt` is saved in UTF-16 rather than UTF-8 encoding, a known reproducibility risk (Section 11).
+- Cold-start latency was not separately isolated as its own measured metric; all read-workload figures are post-warm-up
