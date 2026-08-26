@@ -191,11 +191,3 @@ workloads/traversals.py          # 1-, 2-, and bounded 3-hop traversals
 workloads/aggregations.py        # Global and group-by aggregations
 results/*.json                   # Raw benchmark results
 ```
-
-## Remaining work
-
-1. Finish and validate the traversal rerun.
-2. Consume lookup warm-up results and rerun lookups.
-3. Implement mixed concurrent read/write throughput.
-4. Collect observable footprint metrics and deployment details.
-5. Add charts and final analysis.
