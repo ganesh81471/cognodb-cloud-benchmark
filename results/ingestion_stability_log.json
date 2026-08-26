@@ -1,0 +1,30 @@
+{
+    "raw_rates_by_platform": {
+        "Local Neo4j": [
+            1800.61,
+            1585.86,
+            1873.88
+        ],
+        "Local Memgraph": [
+            14134.08,
+            14179.82,
+            14084.88
+        ],
+        "Local FalkorDB": [
+            8919.41,
+            9339.09,
+            9484.95
+        ],
+        "Local ArangoDB": [
+            33003.91,
+            24990.12,
+            34025.95
+        ],
+        "CognoDB Cloud": [
+            2195.17,
+            2487.0,
+            2141.35
+        ]
+    },
+    "failed_platforms_by_iteration": {}
+}

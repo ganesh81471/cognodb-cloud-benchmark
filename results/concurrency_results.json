@@ -1,0 +1,192 @@
+[
+    {
+        "platform": "Local Neo4j",
+        "workload": "Concurrent Mixed (80% Read / 20% Write)",
+        "warmup_sec": 3,
+        "measured_sec": 10,
+        "concurrency_sweep": [
+            {
+                "throughput_qps": 44.06,
+                "p50_latency_ms": 6.18,
+                "p95_latency_ms": 85.58,
+                "p99_latency_ms": 101.47,
+                "read_ops": 366,
+                "write_ops": 75,
+                "total_ops": 441,
+                "concurrency": 1
+            },
+            {
+                "throughput_qps": 68.67,
+                "p50_latency_ms": 104.55,
+                "p95_latency_ms": 342.43,
+                "p99_latency_ms": 503.53,
+                "read_ops": 557,
+                "write_ops": 130,
+                "total_ops": 687,
+                "concurrency": 10
+            },
+            {
+                "throughput_qps": 113.8,
+                "p50_latency_ms": 302.49,
+                "p95_latency_ms": 892.43,
+                "p99_latency_ms": 1202.0,
+                "read_ops": 934,
+                "write_ops": 204,
+                "total_ops": 1138,
+                "concurrency": 40
+            }
+        ]
+    },
+    {
+        "platform": "Local Memgraph",
+        "workload": "Concurrent Mixed (80% Read / 20% Write)",
+        "warmup_sec": 3,
+        "measured_sec": 10,
+        "concurrency_sweep": [
+            {
+                "throughput_qps": 507.91,
+                "p50_latency_ms": 0.86,
+                "p95_latency_ms": 2.61,
+                "p99_latency_ms": 45.42,
+                "read_ops": 4060,
+                "write_ops": 1023,
+                "total_ops": 5083,
+                "concurrency": 1
+            },
+            {
+                "throughput_qps": 367.24,
+                "p50_latency_ms": 11.36,
+                "p95_latency_ms": 82.83,
+                "p99_latency_ms": 94.23,
+                "read_ops": 2929,
+                "write_ops": 746,
+                "total_ops": 3675,
+                "concurrency": 10
+            },
+            {
+                "throughput_qps": 618.46,
+                "p50_latency_ms": 73.08,
+                "p95_latency_ms": 114.39,
+                "p99_latency_ms": 169.93,
+                "read_ops": 4958,
+                "write_ops": 1228,
+                "total_ops": 6186,
+                "concurrency": 40
+            }
+        ]
+    },
+    {
+        "platform": "Local FalkorDB",
+        "workload": "Concurrent Mixed (80% Read / 20% Write)",
+        "warmup_sec": 3,
+        "measured_sec": 10,
+        "concurrency_sweep": [
+            {
+                "throughput_qps": 996.98,
+                "p50_latency_ms": 0.79,
+                "p95_latency_ms": 2.0,
+                "p99_latency_ms": 2.52,
+                "read_ops": 7961,
+                "write_ops": 2015,
+                "total_ops": 9976,
+                "concurrency": 1
+            },
+            {
+                "throughput_qps": 522.27,
+                "p50_latency_ms": 5.47,
+                "p95_latency_ms": 80.83,
+                "p99_latency_ms": 85.23,
+                "read_ops": 4176,
+                "write_ops": 1050,
+                "total_ops": 5226,
+                "concurrency": 10
+            },
+            {
+                "throughput_qps": 457.81,
+                "p50_latency_ms": 93.78,
+                "p95_latency_ms": 191.24,
+                "p99_latency_ms": 211.37,
+                "read_ops": 3686,
+                "write_ops": 895,
+                "total_ops": 4581,
+                "concurrency": 40
+            }
+        ]
+    },
+    {
+        "platform": "Local ArangoDB",
+        "workload": "Concurrent Mixed (80% Read / 20% Write)",
+        "warmup_sec": 3,
+        "measured_sec": 10,
+        "concurrency_sweep": [
+            {
+                "throughput_qps": 16.49,
+                "p50_latency_ms": 46.52,
+                "p95_latency_ms": 48.35,
+                "p99_latency_ms": 51.19,
+                "read_ops": 165,
+                "write_ops": 0,
+                "total_ops": 165,
+                "concurrency": 1
+            },
+            {
+                "throughput_qps": 160.91,
+                "p50_latency_ms": 47.1,
+                "p95_latency_ms": 52.27,
+                "p99_latency_ms": 55.55,
+                "read_ops": 1610,
+                "write_ops": 0,
+                "total_ops": 1610,
+                "concurrency": 10
+            },
+            {
+                "throughput_qps": 462.89,
+                "p50_latency_ms": 60.68,
+                "p95_latency_ms": 93.16,
+                "p99_latency_ms": 113.05,
+                "read_ops": 4635,
+                "write_ops": 0,
+                "total_ops": 4635,
+                "concurrency": 40
+            }
+        ]
+    },
+    {
+        "platform": "CognoDB Cloud",
+        "workload": "Concurrent Mixed (80% Read / 20% Write)",
+        "warmup_sec": 3,
+        "measured_sec": 10,
+        "concurrency_sweep": [
+            {
+                "throughput_qps": 2.9,
+                "p50_latency_ms": 317.16,
+                "p95_latency_ms": 922.0,
+                "p99_latency_ms": 952.76,
+                "read_ops": 21,
+                "write_ops": 8,
+                "total_ops": 29,
+                "concurrency": 1
+            },
+            {
+                "throughput_qps": 32.45,
+                "p50_latency_ms": 312.26,
+                "p95_latency_ms": 376.05,
+                "p99_latency_ms": 813.44,
+                "read_ops": 268,
+                "write_ops": 57,
+                "total_ops": 325,
+                "concurrency": 10
+            },
+            {
+                "throughput_qps": 141.65,
+                "p50_latency_ms": 286.17,
+                "p95_latency_ms": 313.43,
+                "p99_latency_ms": 330.11,
+                "read_ops": 1137,
+                "write_ops": 281,
+                "total_ops": 1418,
+                "concurrency": 40
+            }
+        ]
+    }
+]

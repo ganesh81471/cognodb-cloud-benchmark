@@ -48,7 +48,70 @@ Indexes are created for `User.userId`, `Movie.movieId`, and `Genre.name`.
 - Results report p50 and p95 milliseconds; raw JSON is retained in `results/`.
 - Aggregation user inputs use one deterministic sequence across all platforms.
 - The 3-hop traversal limits the deduplicated co-rater set to 50 users before its final expansion. The same deterministic bound is used in Cypher, FalkorDB, and AQL to fit the smallest resource envelope.
+- Traversal queries use a fixed random seed (`BENCHMARK_SEED=42`) to ensure all platforms are tested with identical user ID sequences, preventing statistical bias from different random workload distributions.
 - Failed runs and timeouts are reported, not hidden.
+
+## Caveats and Limitations
+
+This benchmark is honest but incomplete. The following material limitations apply to all results:
+
+### Topology and Network
+
+- **CognoDB is remote; all other platforms are local.** CognoDB Cloud latencies include network round-trip time to AWS, while local Docker containers do not. This is a fundamental topology difference that makes latency comparisons between CognoDB and self-hosted platforms structurally unfair. CognoDB's absolute numbers are not comparable to local numbers without subtracting estimated network latency (typically 30–100 ms depending on location and connection).
+- **All benchmark runs originate from a single client machine.** Network conditions, ISP routing, and geographic proximity to CognoDB's region will affect results. A different client location will produce different absolute latencies for CognoDB.
+
+### Resource Constraints
+
+- **Docker resource limits are artificial and may not reflect production deployments.** All local platforms are capped at 0.5 CPU and 256 MB RAM to approximate CognoDB's free tier. In production, these platforms would be given more resources and would perform differently.
+- **Memgraph's 180 MB internal limit is artificially constrained.** This limit was set below the container cap to match the documented resource envelope; in production, Memgraph can use more memory.
+- **CognoDB Cloud's free tier (`c0`) has unknown internal limits.** Resource throttling, query timeouts, or concurrent request limits may be silently applied.
+
+### Query Timeout Behavior
+
+- **Timeout enforcement is inconsistent across platforms.**
+  - Neo4j and Memgraph respect the Bolt protocol's `timeout` parameter on the driver side.
+  - ArangoDB enforces `max_runtime` server-side, but connection timeouts may occur independently.
+  - FalkorDB uses a client-side `socket_timeout` on the Redis connection; server-side query timeouts may not be enforced, leaving expensive queries running on the server after the client has disconnected.
+  - CognoDB Cloud's timeout behavior is undocumented; assumed to enforce server-side limits, but verification is difficult.
+- **Queries that exceed the 15-second timeout are recorded as failures but may continue executing on the server, consuming resources.**
+
+### Workload Completeness
+
+- **Lookup benchmarks may contain warm-up artifacts.** The initial 10 warm-up runs are not discarded from reported results in some cases, which can inflate latencies if cold-start effects are significant.
+- **Some workloads may be skipped entirely if warm-up attempts fail.** For example, if all 10 warm-up runs fail due to server unavailability or resource exhaustion, the measured runs are skipped and the workload is marked as skipped. This prevents biased data collection but also means missing platforms may have no results for that workload.
+- **ArangoDB had initialization issues that were resolved (invalid RocksDB configuration).** If you encounter similar container startup failures, the database may need to be recreated. See the Docker container command for correct RocksDB memory settings.
+
+### Dataset and Query Complexity
+
+- **The MovieLens Small dataset is tiny:** only 610 users, 9,742 movies, and ~100k ratings. Query performance on this dataset may not generalize to production graphs with millions or billions of nodes and relationships.
+- **The 3-hop traversal with a 50-user co-rater limit is a simplified synthetic query.** Real recommendation engines may use more complex aggregations, filters, or multi-hop patterns. Performance rankings may change under different workload patterns.
+- **Lookups and aggregations use very simple queries.** Indexed point lookups and full-graph aggregations do not stress graph traversal, connection pooling, or complex join logic.
+
+### Platform Heterogeneity
+
+- **Load methods differ per platform:**
+  - Cypher-based platforms (Neo4j, Memgraph, FalkorDB, CognoDB) use Cypher `UNWIND` with batching.
+  - ArangoDB uses its native `insert_many()` bulk API, which is not directly comparable to Cypher.
+- **Query languages and optimization strategies differ.**
+  - Cypher databases may use different cardinality estimates, join strategies, and index usage.
+  - ArangoDB uses AQL (a different syntax and execution model) and may have different optimization heuristics.
+  - These differences are fundamental and not due to misconfiguration.
+
+### Reproducibility
+
+- **Traversal queries randomize starting user IDs from the dataset** using a fixed seed to ensure consistency across platforms. However, if the dataset is reloaded or users are renumbered, different users will be selected.
+- **Timing results depend on system load, OS scheduler behavior, and other processes.** Results should be averaged over multiple runs and treated as distributions, not point measurements.
+- **Docker's resource limits may be enforced at different granularities on different machines.** Windows, macOS, and Linux have different container enforcement mechanisms.
+
+### Data Collection Gaps
+
+- **Memory and storage footprint are not measured.** Results reflect only latency and throughput, not resource consumption. A faster platform may use more memory or disk.
+- **Concurrency and connection pooling are not tested.** The benchmark uses sequential single-threaded queries; behavior under concurrent load is unknown.
+- **Cache effects are not controlled.** Results reflect OS page cache, database in-memory caches, and query plan caches in their default states. Clearing caches between runs would change results.
+
+### Ingestion Results Caveat
+
+The ArangoDB ingestion result shown in the summary is from a data reload operation after container restart, not the original load run. Ingestion timing can vary significantly based on whether collections and indexes already exist.
 
 ## Ingestion results
 
