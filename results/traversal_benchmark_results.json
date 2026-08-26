@@ -1,0 +1,167 @@
+[
+  {
+    "platform": "CognoDB Cloud",
+    "workload": "1_Hop",
+    "mean_ms": 340.83,
+    "p50_ms": 320.85,
+    "p95_ms": 445.93,
+    "min_ms": 294.04,
+    "max_ms": 652.33,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "CognoDB Cloud",
+    "workload": "2_Hop",
+    "mean_ms": 326.36,
+    "p50_ms": 320.37,
+    "p95_ms": 347.95,
+    "min_ms": 294.0,
+    "max_ms": 459.5,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "CognoDB Cloud",
+    "workload": "3_Hop",
+    "mean_ms": 692.82,
+    "p50_ms": 639.89,
+    "p95_ms": 1272.74,
+    "min_ms": 334.71,
+    "max_ms": 2440.44,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local Neo4j",
+    "workload": "1_Hop",
+    "mean_ms": 49.72,
+    "p50_ms": 20.23,
+    "p95_ms": 156.31,
+    "min_ms": 4.88,
+    "max_ms": 882.81,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local Neo4j",
+    "workload": "2_Hop",
+    "mean_ms": 13.18,
+    "p50_ms": 13.4,
+    "p95_ms": 20.83,
+    "min_ms": 4.43,
+    "max_ms": 40.66,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local Neo4j",
+    "workload": "3_Hop",
+    "mean_ms": 362.16,
+    "p50_ms": 346.74,
+    "p95_ms": 568.1,
+    "min_ms": 119.99,
+    "max_ms": 800.96,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local Memgraph",
+    "workload": "1_Hop",
+    "mean_ms": 9.14,
+    "p50_ms": 5.5,
+    "p95_ms": 27.64,
+    "min_ms": 1.02,
+    "max_ms": 56.91,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local Memgraph",
+    "workload": "2_Hop",
+    "mean_ms": 3.91,
+    "p50_ms": 2.88,
+    "p95_ms": 8.01,
+    "min_ms": 2.16,
+    "max_ms": 9.59,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local Memgraph",
+    "workload": "3_Hop",
+    "mean_ms": 24.87,
+    "p50_ms": 12.87,
+    "p95_ms": 66.38,
+    "min_ms": 7.25,
+    "max_ms": 78.05,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local FalkorDB",
+    "workload": "1_Hop",
+    "mean_ms": 1.19,
+    "p50_ms": 0.94,
+    "p95_ms": 2.03,
+    "min_ms": 0.57,
+    "max_ms": 8.56,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local FalkorDB",
+    "workload": "2_Hop",
+    "mean_ms": 1.15,
+    "p50_ms": 1.06,
+    "p95_ms": 1.45,
+    "min_ms": 0.78,
+    "max_ms": 3.78,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local FalkorDB",
+    "workload": "3_Hop",
+    "mean_ms": 17.15,
+    "p50_ms": 8.73,
+    "p95_ms": 58.55,
+    "min_ms": 6.44,
+    "max_ms": 65.15,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local ArangoDB",
+    "workload": "1_Hop",
+    "mean_ms": 51.03,
+    "p50_ms": 50.61,
+    "p95_ms": 56.85,
+    "min_ms": 44.63,
+    "max_ms": 65.7,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local ArangoDB",
+    "workload": "2_Hop",
+    "mean_ms": 107.12,
+    "p50_ms": 79.5,
+    "p95_ms": 279.06,
+    "min_ms": 9.76,
+    "max_ms": 461.65,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  },
+  {
+    "platform": "Local ArangoDB",
+    "workload": "3_Hop",
+    "mean_ms": 470.31,
+    "p50_ms": 269.26,
+    "p95_ms": 1536.3,
+    "min_ms": 139.08,
+    "max_ms": 2005.51,
+    "failed_runs": 0,
+    "success_rate": 1.0
+  }
+]

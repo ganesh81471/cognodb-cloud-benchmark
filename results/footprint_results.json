@@ -1,0 +1,27 @@
+[
+    {
+        "platform": "Local Neo4j",
+        "metric": "Store Size",
+        "value": "Not observable via Cypher (storeSize not supported on this Neo4j edition/version)"
+    },
+    {
+        "platform": "Local Memgraph",
+        "metric": "Allocated RAM",
+        "value": "116.95MiB (metric: memory_res, platform-formatted)"
+    },
+    {
+        "platform": "Local FalkorDB",
+        "metric": "Graph Memory Usage (total_graph_sz_mb)",
+        "value": "8.00 MB"
+    },
+    {
+        "platform": "Local ArangoDB",
+        "metric": "Collection Memory",
+        "value": "12.83 MB (metric: documents_size)"
+    },
+    {
+        "platform": "CognoDB Cloud",
+        "metric": "Storage Size",
+        "value": "Not observable via API (Cloud Hosted)"
+    }
+]

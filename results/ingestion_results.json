@@ -41,12 +41,12 @@
   },
   {
     "platform": "Local ArangoDB",
-    "total_time_sec": 11.77,
+    "total_time_sec": 3.95,
     "total_nodes": 10371,
     "total_edges": 122886,
-    "node_rate_per_sec": 880.94,
-    "edge_rate_per_sec": 10438.28,
+    "node_rate_per_sec": 2624.31,
+    "edge_rate_per_sec": 31095.42,
     "load_method": "python-arango insert_many() bulk API (batch_size=2000)",
-    "timestamp": "2026-08-25 08:47:45"
+    "timestamp": "2026-08-26 00:38:17"
   }
 ]

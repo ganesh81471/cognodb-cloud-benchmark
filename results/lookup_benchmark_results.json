@@ -1,0 +1,92 @@
+[
+  {
+    "platform": "CognoDB Cloud",
+    "workload": "Point_Lookup",
+    "mean_ms": 407.2,
+    "p50_ms": 409.02,
+    "p95_ms": 613.97,
+    "min_ms": 282.8,
+    "max_ms": 1330.22
+  },
+  {
+    "platform": "CognoDB Cloud",
+    "workload": "Filtered_Lookup",
+    "mean_ms": 398.39,
+    "p50_ms": 408.59,
+    "p95_ms": 613.93,
+    "min_ms": 292.73,
+    "max_ms": 1023.73
+  },
+  {
+    "platform": "Local Neo4j",
+    "workload": "Point_Lookup",
+    "mean_ms": 51.85,
+    "p50_ms": 10.46,
+    "p95_ms": 87.85,
+    "min_ms": 4.98,
+    "max_ms": 2310.37
+  },
+  {
+    "platform": "Local Neo4j",
+    "workload": "Filtered_Lookup",
+    "mean_ms": 63.08,
+    "p50_ms": 20.08,
+    "p95_ms": 145.52,
+    "min_ms": 10.19,
+    "max_ms": 1230.16
+  },
+  {
+    "platform": "Local Memgraph",
+    "workload": "Point_Lookup",
+    "mean_ms": 1.51,
+    "p50_ms": 0.78,
+    "p95_ms": 1.58,
+    "min_ms": 0.56,
+    "max_ms": 53.06
+  },
+  {
+    "platform": "Local Memgraph",
+    "workload": "Filtered_Lookup",
+    "mean_ms": 8.34,
+    "p50_ms": 3.86,
+    "p95_ms": 53.76,
+    "min_ms": 3.08,
+    "max_ms": 58.29
+  },
+  {
+    "platform": "Local FalkorDB",
+    "workload": "Point_Lookup",
+    "mean_ms": 0.8,
+    "p50_ms": 0.54,
+    "p95_ms": 2.26,
+    "min_ms": 0.42,
+    "max_ms": 2.69
+  },
+  {
+    "platform": "Local FalkorDB",
+    "workload": "Filtered_Lookup",
+    "mean_ms": 2.07,
+    "p50_ms": 1.66,
+    "p95_ms": 2.46,
+    "min_ms": 1.49,
+    "max_ms": 23.4
+  },
+  {
+    "platform": "Local ArangoDB",
+    "workload": "Point_Lookup",
+    "mean_ms": 48.48,
+    "p50_ms": 48.09,
+    "p95_ms": 51.53,
+    "min_ms": 44.61,
+    "max_ms": 58.68
+  },
+  {
+    "platform": "Local ArangoDB",
+    "workload": "Filtered_Lookup",
+    "mean_ms": 51.84,
+    "p50_ms": 52.05,
+    "p95_ms": 54.76,
+    "min_ms": 46.07,
+    "max_ms": 57.24
+  }
+]

@@ -1,0 +1,49 @@
+# Database Benchmark Summary Report
+
+| category    | platform       | workload            |   p50_ms |   p95_ms |   edge_rate_per_sec |   success_rate |
+|:------------|:---------------|:--------------------|---------:|---------:|--------------------:|---------------:|
+| aggregation | CognoDB Cloud  | Global_Avg_Rating   |   998.38 |  1278.26 |              nan    |              1 |
+| aggregation | Local ArangoDB | Global_Avg_Rating   |    70.58 |    82.64 |              nan    |              1 |
+| aggregation | Local FalkorDB | Global_Avg_Rating   |   118.23 |   173.98 |              nan    |              1 |
+| aggregation | Local Memgraph | Global_Avg_Rating   |    26.74 |    82.42 |              nan    |              1 |
+| aggregation | Local Neo4j    | Global_Avg_Rating   |   520.75 |   733.9  |              nan    |              1 |
+| aggregation | CognoDB Cloud  | Rating_Distribution |  1023.03 |  1229.58 |              nan    |              1 |
+| aggregation | Local ArangoDB | Rating_Distribution |    72.9  |    92.1  |              nan    |              1 |
+| aggregation | Local FalkorDB | Rating_Distribution |   119.93 |   179.09 |              nan    |              1 |
+| aggregation | Local Memgraph | Rating_Distribution |    51.95 |    81.78 |              nan    |              1 |
+| aggregation | Local Neo4j    | Rating_Distribution |   502.45 |   677.62 |              nan    |              1 |
+| aggregation | CognoDB Cloud  | User_Genre_Agg      |   409.33 |   729.79 |              nan    |              1 |
+| aggregation | Local ArangoDB | User_Genre_Agg      |    52.35 |    65.63 |              nan    |              1 |
+| aggregation | Local FalkorDB | User_Genre_Agg      |     1.9  |     4.45 |              nan    |              1 |
+| aggregation | Local Memgraph | User_Genre_Agg      |     1.78 |     4.67 |              nan    |              1 |
+| aggregation | Local Neo4j    | User_Genre_Agg      |    18.7  |   116.14 |              nan    |              1 |
+| ingestion   | CognoDB Cloud  | Ingestion           |   nan    |   nan    |             1998.78 |            nan |
+| ingestion   | Local ArangoDB | Ingestion           |   nan    |   nan    |            31095.4  |            nan |
+| ingestion   | Local FalkorDB | Ingestion           |   nan    |   nan    |             7999.45 |            nan |
+| ingestion   | Local Memgraph | Ingestion           |   nan    |   nan    |            12680.4  |            nan |
+| ingestion   | Local Neo4j    | Ingestion           |   nan    |   nan    |             1321.61 |            nan |
+| lookup      | CognoDB Cloud  | Filtered_Lookup     |   408.59 |   613.93 |              nan    |            nan |
+| lookup      | Local ArangoDB | Filtered_Lookup     |    52.05 |    54.76 |              nan    |            nan |
+| lookup      | Local FalkorDB | Filtered_Lookup     |     1.66 |     2.46 |              nan    |            nan |
+| lookup      | Local Memgraph | Filtered_Lookup     |     3.86 |    53.76 |              nan    |            nan |
+| lookup      | Local Neo4j    | Filtered_Lookup     |    20.08 |   145.52 |              nan    |            nan |
+| lookup      | CognoDB Cloud  | Point_Lookup        |   409.02 |   613.97 |              nan    |            nan |
+| lookup      | Local ArangoDB | Point_Lookup        |    48.09 |    51.53 |              nan    |            nan |
+| lookup      | Local FalkorDB | Point_Lookup        |     0.54 |     2.26 |              nan    |            nan |
+| lookup      | Local Memgraph | Point_Lookup        |     0.78 |     1.58 |              nan    |            nan |
+| lookup      | Local Neo4j    | Point_Lookup        |    10.46 |    87.85 |              nan    |            nan |
+| traversal   | CognoDB Cloud  | 1_Hop               |   320.85 |   445.93 |              nan    |              1 |
+| traversal   | Local ArangoDB | 1_Hop               |    50.61 |    56.85 |              nan    |              1 |
+| traversal   | Local FalkorDB | 1_Hop               |     0.94 |     2.03 |              nan    |              1 |
+| traversal   | Local Memgraph | 1_Hop               |     5.5  |    27.64 |              nan    |              1 |
+| traversal   | Local Neo4j    | 1_Hop               |    20.23 |   156.31 |              nan    |              1 |
+| traversal   | CognoDB Cloud  | 2_Hop               |   320.37 |   347.95 |              nan    |              1 |
+| traversal   | Local ArangoDB | 2_Hop               |    79.5  |   279.06 |              nan    |              1 |
+| traversal   | Local FalkorDB | 2_Hop               |     1.06 |     1.45 |              nan    |              1 |
+| traversal   | Local Memgraph | 2_Hop               |     2.88 |     8.01 |              nan    |              1 |
+| traversal   | Local Neo4j    | 2_Hop               |    13.4  |    20.83 |              nan    |              1 |
+| traversal   | CognoDB Cloud  | 3_Hop               |   639.89 |  1272.74 |              nan    |              1 |
+| traversal   | Local ArangoDB | 3_Hop               |   269.26 |  1536.3  |              nan    |              1 |
+| traversal   | Local FalkorDB | 3_Hop               |     8.73 |    58.55 |              nan    |              1 |
+| traversal   | Local Memgraph | 3_Hop               |    12.87 |    66.38 |              nan    |              1 |
+| traversal   | Local Neo4j    | 3_Hop               |   346.74 |   568.1  |              nan    |              1 |
